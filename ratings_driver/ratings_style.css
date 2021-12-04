@@ -1,0 +1,202 @@
+* {box-sizing: border-box;}
+
+body
+{
+    background-color: #DEDEDE;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #212121;
+}
+
+.main-container
+{
+    padding-top: 50px;
+}
+
+.main-container-content
+{
+    margin: auto;
+    width: 40%;
+    background-color: white; 
+    border: 1px solid #CCCCCC;
+}
+
+.main-content-header
+{
+    border-bottom: 1px solid #CCCCCC;
+    padding: 10px;
+    box-shadow: 0 4px 6px -6px gray;
+    font-weight: bold;
+    font-size: 16px;
+    display: flex;
+}
+
+.header-content-left
+{
+    margin-left: 0;
+    margin-right: auto;
+    display: flex;
+    text-align: left; 
+    max-width: 300px; 
+}
+ 
+.header-content-right
+{
+  margin-right: 0;
+  margin-left: auto;
+  flex: 2;
+  display: flex; 
+}
+
+
+.btn-go-back
+{
+    border: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 0;
+    margin-left: auto;
+    border-radius: 20px;
+    background: none;
+}
+
+.btn-go-back:hover {background-color: #F3F3F5;}
+
+.review-rating-content
+{
+    width: auto;
+    color: #050505;
+    padding: 16px;
+    height: 400px;
+    max-height: 400px;
+    overflow-y: scroll;
+}
+
+.product-preview-wrapper
+{
+    display: flex;
+    /* width: 80%; */
+}
+
+.product-image-preview
+{
+    margin-left: 0;
+    margin-right: auto;
+}
+
+#product-image
+{
+    border-radius: 8px;
+}
+
+.product-review-controls-wrapper
+{
+    display: flex;
+    flex: 2;
+    margin-left: 14px;
+    font-size: 14px;
+}
+
+#product-review-name
+{
+    font-weight: bold;
+    color: #353535;
+    font-size: 18px;
+}
+
+#product-review-subtitle
+{   
+    color: #686868;
+    font-size: 14px;
+    margin-top: 10px; 
+    margin-bottom: 10px;
+}
+
+.star-rating-controls-wrapper
+{
+    margin-top: 10px;
+    margin-bottom: 16px; 
+} 
+
+.comment-box-wrapper
+{
+    margin-top: 6px;
+}
+ 
+.input-comment-box
+{ 
+    outline: none !important;
+    border:1px solid #535353; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+    color: #444; 
+}
+
+.input-comment-box:focus
+{ 
+    outline: none !important;
+    border:1px solid #FF4800;
+    box-shadow: 0 0 5px #FF8555;
+}
+
+.comment-action-buttons
+{
+    text-align: right;
+    margin-top: 4px;
+}
+
+.comment-action-button
+{
+    background-color: #FF4800;
+    color: white;
+    border: none;
+    padding: 6px 8px;
+    width: 80px;
+    border-radius: 4px;
+}
+
+.comment-action-button:hover {background-color: #FF7000;}
+
+.ratings-and-review { margin-top: 16px; }
+.ratings-and-review-content-wrapper
+{
+    margin-top: 10px;
+}
+
+.quality-marker-stars-wrapper
+{
+    text-align: center;
+}
+
+.quality_marker_numerical
+{
+    font-size: 32px;
+}
+
+#rating-review-content-card
+{
+    border-bottom: 1px solid #CCCCCC;
+    padding: 10px;
+    box-shadow: 0 0 2px gray;
+    background-color: white;
+    margin-top: 8px;
+}
+
+#reviewers-info
+{
+    display: flex;
+}
+
+#rating-reviewer-stars
+{
+    margin-left: 16px;
+    display: flex;
+}
+
+#review-content-comment
+{
+    color: #444;
+    margin-top: 8px; 
+    width: 80%;
+    /* margin-left: 40px; */
+    font-size: 13px;
+}

@@ -1,0 +1,177 @@
+@font-face {
+    font-family: "Alata";
+    src: url("Alata.ttf");
+}
+
+*{box-sizing: border-box;}
+
+body
+{
+    margin: 0;
+    background-color: #DEDEDE;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #212121;
+}
+
+.inbox-wrapper
+{
+    padding: 100px;
+}
+
+.inbox-content-header
+{
+    display: flex;
+    font-family: "Alata";
+    padding: 10px 20px;
+    border-bottom: 1px solid #CCCCCC;
+    box-shadow: 0 4px 6px -6px gray; 
+}
+
+.inbox-header-title
+{
+    margin-left: 0;
+    margin-right: auto;
+    font-size: 20px;
+    color: #333333; 
+}
+
+.inbox-header-controls
+{
+    display: flex;
+    width: 160px; 
+    margin-right: 0;
+    margin-left: auto;
+}
+
+.btn-go-back
+{
+    margin-right: 0;
+    margin-left: auto;
+    background: none;
+    border: none;
+    border-radius: 20px;
+}
+
+.btn-seen-all
+{ 
+    background-color: #F3F3F5; 
+    color: #444444;
+    font-family: "Alata";
+    border: none;
+    border-radius: 20px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.btn-seen-all:hover
+{
+    background-color: #0092F3;
+    color: white;
+}
+
+.btn-go-back:hover {background-color: #F3F3F5;}
+
+.inbox-content
+{
+    box-sizing: border-box;
+    background-color: #fefefe;
+    margin: auto; 
+    border: 1px solid #CCCCCC;
+    width: 50%; 
+    min-width: 480px;
+}
+
+.inbox-content-main
+{
+    padding: 20px;
+    font-family: "Alata";
+}
+
+.inbox-content-wrapper
+{
+    display: flex;   
+}
+
+.inbox-content-unread { background-color: #EEEEEE; }
+
+.inbox-marker 
+{
+    font-size: 12px; 
+    margin-top: 8px;
+}
+
+.a-seen-marker 
+{
+    text-decoration: none;
+    color:#0099FF; 
+}
+
+.a-seen-marker:hover {color: darkblue; }
+.a-seen-marker-checked {color: #01A31C;}
+
+.inbox-content-wrapper:hover 
+{
+    /* Kulay orange na highlight  (kahit ano gusto nyong ipalit ok lang)
+    background-color: #FFF2E7; */
+
+    /* kulay blue na highlight */
+    background-color: #DBE5FF;
+}
+
+.inbox-content-left
+{
+    display: flex;
+    margin-left: 0;
+    margin-right: auto;
+    /* width: fit-content; */
+    width: 380px;
+    max-width: 380px; 
+    padding: 8px; 
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.inbox-contact-pic
+{
+    margin-left: 0;
+    margin-right: auto; 
+    position: relative;
+    display: flex;
+
+}
+
+.contact-pic
+{
+    border-radius: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
+    position: relative;
+}
+
+.inbox-contact-info
+{
+    flex: 2;
+    text-align: left;
+    margin-left: 15px;
+}
+
+.inbox-content-right
+{
+    text-align: right;
+    margin-right: 0;
+    margin-left: auto; 
+    width: 160px;
+    max-width: 160px;
+    padding-top: 10px;  
+    padding-right: 4px;
+}
+ 
+.contact-info-msg-preview
+{
+    font-size: 13px;
+    margin-top: 4px;
+    color: #555555;
+}
+
+.inbox-timestamp { font-size: 12px; }

@@ -1,0 +1,84 @@
+=============================================================================
+SECTION :: MAIN SYSTEM (FRONTEND)
+=============================================================================
+
+--Backup Original File "message.php"
+    --Original File Changed To "message.php.backup"
+
+--Backup Original File At "classes" --> "post.php"
+    --Original File Changed To "post.php.backup"
+
+--Backup Original File "marksold.php"
+    --Original File Changed To "marksold.php.backup"
+
+--Backup Original File "user_post.php"
+    --Original File Changed To "user_post.php.backup"
+
+--Added New Folder "chat_module"
+    --Added New File Inside "chat_module" --> "background_msg.php"
+    --Added New File Inside "chat_module" --> "background_inbox.php"
+    --Added New File Inside "chat_module" --> "chat.php"
+    --Added New File Inside "chat_module" --> "jquery.min.js"
+    --Added New File Inside "chat_module" --> "inbox.php"
+    --Added New Folder "cfg" Inside "chat_module"
+        --Added New File Inside "cfg" --> 'config.php'
+     
+    --Added New Folder "util" Inside "chat_module" 
+        --Added New File Inside "util" --> "mark_seen.php"
+        --Added New File Inside "util" --> "open_message.php"
+        --Added New File Inside "util" --> "seen_all.php"
+        --Added New File Inside "util" --> "traderinfo.php"
+
+--Added New Folder "styles" Inside "chat_module"
+    --Added New File Inside "styles" --> "Alata.ttf"
+    --Added New File Inside "styles" --> "back.png"
+    --Added New File Inside "styles" --> "chat_ui.css"    
+    --Added New File Inside "styles" --> "chat-icon.png"
+    --Added New File Inside "styles" --> "chat-icon-on.png"
+    --Added New File Inside "styles" --> "emoji.png"
+    --Added New File Inside "styles" --> "inbox_ui.png"
+    --Added New File Inside "styles" --> "picker_modal.css.png"
+    --Added New File Inside "styles" --> "send.png"
+    
+    
+--Modified "post.php" (FlipTrade/post.php)
+    --Code changed at line# 22
+        --Added code for passing data between pages
+
+--Modified "sidebar.php"
+    --Added JQuery Reference at line# 2
+    --Added Chat Notification Nav Link at line# 32 
+    --Added Chat Notification Driver at line# 47
+
+--Modified "style.css"
+    --Added Chat Module Styles starting at line# 322
+    --Added styles for POST Options (MARK SOLD, EDIT, DELETE) at line# 344
+    --Added Styles for ITEM STATUS INDICATOR (sold / available) at line# 382
+
+=============================================================================
+SECTION :: DATABASE (BACKEND)
+=============================================================================
+
+--Added New Table Into Database "db_fliptrade"
+    --Changed Text Encoding Of VARCHAR and TEXT datacolumns To Support EMOJIES
+    --Table Name : "chat"
+        --Contains Columns :  
+            --id                (INT PRIMARY AUTOINCREMENT)
+            --recieved_by       (TEXT utf8mb4_unicode_cl)
+            --message           (TEXT utf8mb4_unicode_cl)
+            --sender            (VARCHAR 255 utf8mb4_unicode_cl)
+            --created           (TIMESTAMP default: current_timestamp())
+            --csid              (TEXT utf8mb4_unicode_cl)
+     
+    --Table Name : "inbox"
+    --Changed Text Encoding Of VARCHAR and TEXT datacolumns To Support EMOJIES
+        --Contains Columns :
+            --id                (INT PRIMARY AUTOINCREMENT)
+            --message           (TEXT utf8mb4_unicode_cl)
+            --sender            (VARCHAR 255 utf8mb4_unicode_cl)
+            --senderdp          (TEXT utf8mb4_unicode_cl)
+            --created           (DATETIME default:current_timestamp())
+            --reciever          (TEXT utf8mb4_unicode_cl)
+            --status            (VARCHAR 255 utf8mb4_unicode_cl)
+            --senderuid         (TEXT utf8mb4_unicode_cl)
+            --csid              (TEXT utf8mb4_unicode_cl UNIQUE) 

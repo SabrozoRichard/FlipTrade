@@ -1,0 +1,50 @@
+<div id="post">
+  <div>
+    <img src="<?php echo $USER_ROW['posted_img'] ?>" style="width: 150px; height: 160px;">  
+  </div>
+  <div style="padding: 10px;">
+    <div style="display: flex;">
+      <p id="output" style="font-size: 11px;">Active</p> &nbsp;
+      <h3> <?php echo $USER_ROW['title'] ?></h3>
+    </div>
+    <p style="font-size: 10px; margin-top: -10px;"> Variant : <?php echo $USER_ROW['variant'] ?></p>
+    <h4><?php echo $USER_ROW['post'] ?></h4>
+    <p style="font-size: 10px; padding: 2px;"> <?php echo $USER_ROW['location'] ?></p>
+    <div style="display: flex;">
+    
+    <a style="text-decoration: none; color: #000" href="marksold.php?type=post&id=<?php echo $USER_ROW['postid'] ?>"> 
+      Mark as Sold 
+    </a> &nbsp; | &nbsp;
+
+      <?php  
+      $post = new Post();
+      if ($post->i_own_post($USER_ROW['postid'],$_SESSION['Fliptrade_userid'])) {
+        echo "
+        
+            <a style='text-decoration: none; color: #000;' href='edit.php?id=$USER_ROW[postid]' >
+              Edit
+            </a> &nbsp; | &nbsp;
+            <a style='text-decoration: none; color: #000;' href='delete.php?id=$USER_ROW[postid]' >
+              Delete 
+            </a>";
+      }
+      ?>
+        
+      </div>
+    </div>
+  </div>
+  <hr>        
+  <script>
+        var clicked = false;
+        function toggle(){
+          if (!clicked) {
+            clicked = true;
+            document.getElementById('btn').innerHTML = 'Mark as Available';
+            document.getElementById('output').innerHTML = 'Sold';
+          }else{
+            clicked = false;
+            document.getElementById('btn').innerHTML = 'Mark as Sold';
+            document.getElementById('output').innerHTML = 'Active';
+           }
+          }
+          </script>
